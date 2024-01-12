@@ -1,0 +1,5 @@
+project(tests)
+cmake_minimum_required(VERSION 3.15)
+add_executable(unit unit.cpp ../tape/TapeImpl.cpp ../tape-sort/TapeSortMergeImpl.cpp)
+target_link_libraries(unit PRIVATE gtest_main gtest pthread)
+add_test(NAME unit COMMAND unit)
